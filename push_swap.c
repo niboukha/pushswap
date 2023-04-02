@@ -6,7 +6,7 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:24:30 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 15:16:00 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/02 13:08:37 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	appel_functions(t_list **stack_a, t_list **stack_b)
 	sort_5(stack_a, stack_b);
 	longest_increasing_subsequence(stack_a, stack_b);
 	while (*stack_b)
-		minimum_maximum_stack_b(stack_a, stack_b);
+		rr_rrr_stack_b(stack_a, stack_b);
 	clear_stack_a(stack_a);
 }
 

@@ -6,7 +6,7 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 14:04:13 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 15:00:54 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/02 13:02:52 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	push_in_stack_b(t_longest *lis, t_list **stack_a, t_list **stack_b,
 		}
 		else
 			ra(stack_a, 1);
-		if (size == 0 && flag == 0 && size_tmp > 200)
+		if (size == 0 && flag == 0 && size_tmp > 100)
 			re_push_stack_b(stack_a, &flag, &size);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:26:57 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 02:20:48 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/02 13:08:30 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	fill_arrays(t_list **stack_a, t_longest	*lis);
 void	largest_array(t_longest *lis);
 void	push_in_stack_b(t_longest *arr, t_list **stack_a,
 			t_list **stack_b, int flag);
-void	minimum_maximum_stack_b(t_list **stack_a, t_list **stack_b);
+void	rr_rrr_stack_b(t_list **stack_a, t_list **stack_b);
 int		combinaison(t_bound i, t_bound j, int min);
 void	instruction(t_list **stack_a, t_list **stack_b, t_bound i, t_bound j);
 void	clear_stack_a(t_list **stack_a);
@@ -113,7 +113,5 @@ int		_max(int x, int y);
 int		_min(int x, int y);
 void	sort_5(t_list **stack_a, t_list **stack_b);
 void	fill_arrays_sub_len(t_longest *tmp_list);
-
-void	ft_checker(t_list **stack_a);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:21:51 by niboukha          #+#    #+#             */
-/*   Updated: 2023/03/31 00:40:28 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/02 13:08:53 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_bound	minimum_maximum_stack_a(t_list *tmp_a, int val,
+t_bound	rr_rrr_stack_a(t_list *tmp_a, int val,
 	t_bound j_tmp, t_bound j_min)
 {
 	t_bound	j;
@@ -114,7 +114,7 @@ void	instruction(t_list **stack_a, t_list **stack_b, t_bound i, t_bound j)
 	pa(stack_a, stack_b, 1);
 }
 
-void	minimum_maximum_stack_b(t_list **stack_a, t_list **stack_b)
+void	rr_rrr_stack_b(t_list **stack_a, t_list **stack_b)
 {
 	t_norm_b	bound;
 	t_list		*tmp_b;
@@ -128,7 +128,7 @@ void	minimum_maximum_stack_b(t_list **stack_a, t_list **stack_b)
 	tmp_b = *stack_b;
 	while (tmp_b)
 	{
-		bound.j = minimum_maximum_stack_a(*stack_a,
+		bound.j = rr_rrr_stack_a(*stack_a,
 				tmp_b->data, bound.i, bound.i);
 		if (combinaison(bound.j, bound.i, min) < min)
 		{
