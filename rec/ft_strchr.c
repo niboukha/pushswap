@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 23:28:39 by niboukha          #+#    #+#             */
-/*   Updated: 2023/02/28 12:05:15 by niboukha         ###   ########.fr       */
+/*   Created: 2022/10/09 16:36:18 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:13:51 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-	size_t	size;
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	if (!s1 || !s2)
-		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (size + 2));
-	j = 0;
 	i = 0;
-	if (!str)
-		return (0);
-	while (s1[j])
-		str[i++] = s1[j++];
-	str[i++] = '/';
-	j = 0;
-	while (s2[j])
+	while (s[i])
 	{
-		str[i] = s2[j];
+		if (s[i] == (char)c)
+			return ((char *)s + i);
 		i++;
-		j++;
 	}
-	str[i] = '\0';
-	return (str);
+	if ((char)c == '\0')
+		return ((char *)(s + ft_strlen(s)));
+	return (0);
 }

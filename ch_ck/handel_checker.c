@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 02:40:56 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 14:52:48 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:24:21 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../headers/checker.h"
 
 int	ft_atoi(char *str)
 {

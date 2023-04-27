@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 02:09:38 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 03:12:42 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:24:15 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../headers/checker.h"
 
 void	ch_sa(t_list **stack_a)
 {

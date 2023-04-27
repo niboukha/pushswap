@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 20:16:12 by niboukha          #+#    #+#             */
-/*   Updated: 2023/02/28 14:32:06 by niboukha         ###   ########.fr       */
+/*   Created: 2022/10/26 18:00:20 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:13:25 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*last;
 
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
+	if (!lst)
+		return ;
+	last = ft_lstlast(*lst);
+	if (*lst == NULL)
+		*lst = new;
+	else
+		last->next = new;
 }

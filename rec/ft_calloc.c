@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 18:00:20 by niboukha          #+#    #+#             */
-/*   Updated: 2023/03/01 11:52:12 by niboukha         ###   ########.fr       */
+/*   Created: 2022/10/13 14:05:34 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:13:16 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_bzero(void *s, size_t n)
 {
-	t_list	*last;
+	size_t	i;
 
-	if (!lst)
-		return ;
-	last = ft_lstlast(*lst);
-	if (*lst == NULL)
-		*lst = new;
-	else
-		last->next = new;
+	i = 0;
+	while (i < n)
+		((unsigned char *)s)[i++] = 0;
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*ptr;
+	size_t	mult;
+	size_t	i;
+
+	i = 0;
+	if (size && count > SIZE_MAX / size)
+		return (NULL);
+	mult = count * size;
+	ptr = malloc(mult);
+	if (!ptr)
+		return (0);
+	ft_bzero(ptr, mult);
+	return (ptr);
 }

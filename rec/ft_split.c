@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 00:43:39 by niboukha          #+#    #+#             */
-/*   Updated: 2023/02/28 11:58:56 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:13:48 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 static int	c_w(char const *str, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 20:09:45 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 03:13:57 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:30:28 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../headers/get_next_line.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

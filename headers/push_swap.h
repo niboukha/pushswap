@@ -6,7 +6,7 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:26:57 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/02 13:08:30 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/07 18:14:45 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,7 @@ int		_max(int x, int y);
 int		_min(int x, int y);
 void	sort_5(t_list **stack_a, t_list **stack_b);
 void	fill_arrays_sub_len(t_longest *tmp_list);
+void	free_arr(t_longest	*lis, t_longest	*tmp_list);
+void	init_arr_tmp(t_longest	*tmp_list);
 
 #endif

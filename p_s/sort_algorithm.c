@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:21:51 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/02 13:08:53 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:23:27 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 t_bound	rr_rrr_stack_a(t_list *tmp_a, int val,
 	t_bound j_tmp, t_bound j_min)

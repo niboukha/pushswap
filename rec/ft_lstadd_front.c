@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:24:04 by niboukha          #+#    #+#             */
-/*   Updated: 2023/03/02 13:38:50 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:13:35 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   free_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 11:21:54 by niboukha          #+#    #+#             */
-/*   Updated: 2023/03/12 13:26:34 by niboukha         ###   ########.fr       */
+/*   Created: 2023/04/07 18:14:09 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:23:02 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-t_list	*ft_lstnew(int data)
+void	free_arr(t_longest	*lis, t_longest	*tmp_list)
 {
-	t_list	*new;
+	int	j;
 
-	new = malloc(sizeof(t_list));
-	new->index = -1;
-	if (!new)
-		return (NULL);
-	new->data = data;
-	new->next = NULL;
-	return (new);
+	j = 0;
+	while (j < 3)
+		free (lis->arr[j++]);
+	j = 0;
+	while (j < 3)
+		free (tmp_list->arr[j++]);
+}
+
+void	init_arr_tmp(t_longest	*tmp_list)
+{
+	int	i;
+
+	i = 0;
+	while (i < 3)
+		tmp_list->arr[i++] = 0;
 }

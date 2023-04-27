@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 14:04:13 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/02 13:02:52 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:23:19 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 void	re_push_stack_b(t_list **stack_a, int	*flag, int *size)
 {

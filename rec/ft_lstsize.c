@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 14:05:34 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 02:52:10 by niboukha         ###   ########.fr       */
+/*   Created: 2023/03/30 13:27:28 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:13:45 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (i < n)
-		((unsigned char *)s)[i++] = 0;
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	char	*ptr;
-	size_t	mult;
-	size_t	i;
-
-	i = 0;
-	if (size && count > SIZE_MAX / size)
-		return (NULL);
-	mult = count * size;
-	ptr = malloc(mult);
-	if (!ptr)
-		return (0);
-	ft_bzero(ptr, mult);
-	return (ptr);
+	while (lst)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }

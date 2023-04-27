@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:08:05 by niboukha          #+#    #+#             */
-/*   Updated: 2022/11/14 09:39:56 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:30:19 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../headers/get_next_line.h"
 
 static char	*ft_read_line(int fd, char *str)
 {

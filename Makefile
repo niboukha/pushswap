@@ -6,10 +6,9 @@
 #    By: niboukha <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 14:48:57 by niboukha          #+#    #+#              #
-#    Updated: 2023/04/01 14:42:10 by niboukha         ###   ########.fr        #
+#    Updated: 2023/04/27 12:37:23 by niboukha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME = push_swap
 
@@ -19,16 +18,15 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = hundling_functions.c push_swap.c ft_calloc.c ft_lstadd_back.c ft_lstadd_front.c ft_lstlast.c\
-	ft_lstnew.c ft_lstsize.c ft_split.c ft_strcmp.c indexing_stack.c sort_algorithm.c\
-	longest_incr_sub.c push_in_stack_b.c clear_stack_a.c sort_2_3_5.c handling_functions_2.c\
-	handling_functions_rrb.c ft_strlen.c
+SRC = p_s/hundling_functions.c p_s/push_swap.c rec/ft_calloc.c rec/ft_lstadd_back.c rec/ft_lstadd_front.c rec/ft_lstlast.c\
+	rec/ft_lstnew.c rec/ft_lstsize.c rec/ft_split.c rec/ft_strcmp.c p_s/indexing_stack.c p_s/sort_algorithm.c\
+	p_s/longest_incr_sub.c p_s/push_in_stack_b.c p_s/clear_stack_a.c p_s/sort_2_3_5.c p_s/handling_functions_2.c\
+	p_s/handling_functions_rrb.c rec/ft_strlen.c p_s/free_functions.c
 
-BONUS = checker.c ft_calloc.c ft_lstadd_back.c ft_lstadd_front.c ft_lstlast.c\
-	ft_lstnew.c ft_lstsize.c ft_split.c ft_strcmp.c handling_functions_2.c\
-	handling_functions_rrb.c hundling_functions.c get_next_line.c\
-	get_next_line_utils.c checker_util.c checker_util_2.c checker_util_rrr.c\
-	handel_checker.c ft_strlen.c
+BONUS = ch_ck/checker.c rec/ft_calloc.c rec/ft_lstadd_back.c rec/ft_lstadd_front.c rec/ft_lstlast.c\
+	rec/ft_lstnew.c rec/ft_lstsize.c rec/ft_split.c rec/ft_strcmp.c rec/get_next_line.c\
+	rec/get_next_line_utils.c ch_ck/checker_util.c ch_ck/checker_util_2.c ch_ck/checker_util_rrr.c\
+	ch_ck/handel_checker.c rec/ft_strlen.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,12 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:24:30 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/02 13:08:37 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:23:22 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
+#include "../headers/push_swap.h"
 void	appel_functions(t_list **stack_a, t_list **stack_b)
 {
 	indexing_stack(*stack_a);
@@ -44,10 +43,21 @@ void	handel_args(char **split_args, t_list **stack_a, int i)
 	}
 }
 
-void	handle_error(void)
+int	handle_error(void)
 {
 	write(2, "Error\n", 7);
 	exit(1);
+	return (1);
+}
+
+void	ft_free(char **split_args)
+{
+	int	i;
+
+	i = -1;
+	while (split_args[++i])
+		free(split_args[i]);
+	free(split_args);
 }
 
 int	main(int ac, char **av)
@@ -66,13 +76,12 @@ int	main(int ac, char **av)
 		while (++j < ac - 1)
 		{
 			i = -1;
-			if (ft_strlen(av[j + 1]) == 0)
-				handle_error();
+			(ft_strlen(av[j + 1]) == 0) && handle_error();
 			split_args = ft_split(av[j + 1], ' ');
-			if (!split_args[0])
-				handle_error();
+			(!split_args) && handle_error();
 			while (split_args[++i])
 				handel_args(split_args, &stack_a, i);
+			ft_free(split_args);
 		}
 		appel_functions(&stack_a, &stack_b);
 	}

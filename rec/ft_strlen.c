@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 16:36:18 by niboukha          #+#    #+#             */
-/*   Updated: 2023/02/28 16:38:34 by niboukha         ###   ########.fr       */
+/*   Created: 2023/02/15 20:12:43 by niboukha          #+#    #+#             */
+/*   Updated: 2023/04/27 12:14:00 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
 		i++;
-	}
-	if ((char)c == '\0')
-		return ((char *)(s + ft_strlen(s)));
-	return (0);
+	return (i);
 }

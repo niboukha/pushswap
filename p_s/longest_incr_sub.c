@@ -6,18 +6,17 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 14:56:40 by niboukha          #+#    #+#             */
-/*   Updated: 2023/04/01 03:05:36 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:23:16 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 void	largest_array(t_longest *lis)
 {
 	int	i;
 
 	i = 0;
-	lis->arr_lis = malloc(sizeof (int) * lis->length);
 	lis->max = lis->arr[1][0];
 	while (i < lis->length)
 	{
@@ -53,7 +52,7 @@ void	fill_arrays(t_list **stack_a, t_longest	*lis)
 	while (tmp)
 	{
 		lis->arr[0][j++] = tmp->data;
-			tmp = tmp->next;
+		tmp = tmp->next;
 	}
 	j = 0;
 	while (j < lis->length)
@@ -75,7 +74,12 @@ void	fill_arrays_tmp(t_list **stack_a, t_longest *lis, t_longest *tmp_list)
 	tmp_list->length = lis->length;
 	j = 0;
 	while (j < 3)
-		tmp_list->arr[j++] = malloc(sizeof (int) * tmp_list->length);
+	{
+		if (tmp_list->arr[j])
+			free(tmp_list->arr[j]);
+		tmp_list->arr[j] = malloc(sizeof (int) * tmp_list->length);
+		j++;
+	}
 	k = -1;
 	while (++k < size_a)
 	{
@@ -116,6 +120,8 @@ void	longest_increasing_subsequence(t_list **stack_a, t_list **stack_b)
 	fill_arrays(stack_a, &lis);
 	size = ft_lstsize(*stack_a);
 	size_a = size;
+	init_arr_tmp(&tmp_list);
+	tmp_list.arr_lis = malloc(sizeof (int) * size_a);
 	while (size--)
 	{
 		fill_arrays_tmp(stack_a, &lis, &tmp_list);
@@ -124,10 +130,11 @@ void	longest_increasing_subsequence(t_list **stack_a, t_list **stack_b)
 		if (lis.size < tmp_list.size)
 		{
 			lis.size = tmp_list.size;
+			free(lis.arr_lis);
 			lis.arr_lis = tmp_list.arr_lis;
 		}
 	}
-	if (size_a == lis.size + 1 && (*stack_a)->index == 0)
-		exit(0);
+	free_arr(&lis, &tmp_list);
 	push_in_stack_b(&lis, stack_a, stack_b, 0);
+	free(lis.arr_lis);
 }

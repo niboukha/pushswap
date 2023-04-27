@@ -6,11 +6,11 @@
 /*   By: niboukha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 14:13:28 by niboukha          #+#    #+#             */
-/*   Updated: 2023/03/30 14:13:54 by niboukha         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:22:58 by niboukha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../headers/push_swap.h"
 
 int	ft_atoi(char *str)
 {
